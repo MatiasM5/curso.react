@@ -1,15 +1,18 @@
 const Navbar = () => {
     return (
-    <nav>
-       <ul class="nav justify-content-end">
-        <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Productos</a>
+    <nav className="bg">
+       <ul className="nav justify-content-end">
+       <li className="nav-item">
+        <a className="nav active"  href="#">Home</a>
         </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Nosotros</a>
+        <li className="nav-item">
+        <a className="nav active"  href="#">Productos</a>
         </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Contacto</a>
+        <li className="nav-item">
+        <a className="nav" href="#">Nosotros</a>
+        </li>
+        <li className="nav-item">
+        <a className="nav" href="#">Contacto</a>
         </li>
        </ul>
     </nav>

@@ -1,3 +1,19 @@
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav{
+  display: block;
+  padding: .5rem 1rem;
+  padding-top: 0.5rem;
+}
+
+.bg{
+  background-color: #282c34; 
+}
+
+
 .App {
   text-align: center;
 }
