@@ -13,6 +13,10 @@ nav ul li a {
   background-color: #282c34; 
 }
 
+.cart{
+  color: white;
+  margin-top: 5px;
+}
 
 .App {
   text-align: center;
