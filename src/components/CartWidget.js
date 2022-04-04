@@ -4,7 +4,7 @@ import { ShoppingCartOutlined } from "@material-ui/icons";
 
 const CartWidget = () => {
     return (
-        <Badge badgeContent={6} color="secondary">
+        <Badge badgeContent={8} color="secondary">
             <ShoppingCartOutlined />
         </Badge>
     );
