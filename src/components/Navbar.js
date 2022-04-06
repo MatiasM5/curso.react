@@ -2,7 +2,7 @@ import React from "react";
 import CartWidget  from "./CartWidget";
 
 
-const Navbar = () => {
+const NavBar = () => {
     return (
     <nav className="bg">
        <ul className="nav justify-content-end">
@@ -28,4 +28,4 @@ const Navbar = () => {
     );
 }
 
-export default Navbar;
+export default NavBar;

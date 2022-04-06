@@ -1,19 +1,7 @@
+import Home from "./pages/Home"
 
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
-import Navbar from './components/Navbar';
-import ItemListContainer from './components/ItemListContainer';
-
-
-
-function App() {
-  return (
-    <>
-      <Navbar></Navbar>
-      <ItemListContainer></ItemListContainer>
-    </>
-  );
-}
+const App = () => {
+  return <Home />;
+};
 
 export default App;
