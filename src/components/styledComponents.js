@@ -1,5 +1,12 @@
 import  styled from "styled-components"
 
+
+/*const nav = styled.a`
+display: block;
+padding: .5rem 1rem;
+padding-top: 0.5rem;
+`; */
+
 const ProductAmountContainer = styled.div`
     display: flex;
     align-items: center;
