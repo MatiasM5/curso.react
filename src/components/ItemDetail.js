@@ -1,14 +1,15 @@
-import { Button } from '@material-ui/core';
+/*import { Button } from '@material-ui/core';*/
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+/*import { Link } from 'react-router-dom';*/
 import ItemCount from './ItemCount';
 import { DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price } from './styledComponents';
+import ItemLink from './ItemLink'
 
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
 
     const onAdd = (qty) => {
-        alert("You have selected " + qty + " items.");
+        alert("Has seleccionado" + qty + " items.");
         setItemCount(qty);
     }
 
@@ -31,7 +32,7 @@ const ItemDetail = ({ item }) => {
                     {
                         itemCount === 0
                         ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
-                        : <Link to='/cart' style={{textDecoration: "none"}}><Button variant="contained" color="secondary">CheckOut</Button></Link>
+                        : <ItemLink></ItemLink>
                     }
                 </WrapperDetail>
             </DetailContainer>
