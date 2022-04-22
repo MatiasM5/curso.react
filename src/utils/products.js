@@ -2,7 +2,7 @@ const products = [
     {
       id: 30,
       name: "Agua Con Gas 1,5 lts",
-      stock: 0,
+      stock: 50,
       cost: 140,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
       image: [

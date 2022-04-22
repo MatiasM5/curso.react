@@ -8,21 +8,20 @@ const NavBar = () => {
     <nav className="bg">
        <ul className="nav justify-content-end">
        <li className="nav-item">
-        <a className="nav active"  href="#">Home</a>
+        <a className="nav active"  href="./">Home</a>
         </li>
         <li className="nav-item">
-        <a className="nav active"  href="#">Productos</a>
+        <a className="nav active"  href="./">Productos</a>
         </li>
         <li className="nav-item">
-        <a className="nav" href="#">Nosotros</a>
+        <a className="nav" href="./">Nosotros</a>
         </li>
         <li className="nav-item">
-        <a className="nav" href="#">Contacto</a>
+        <a className="nav" href="./">Contacto</a>
         </li>
-        <div className="cart">
-            <CartWidget/>
-        </div>
-            
+        <div className="cart"> 
+           <a href="/cart"> <CartWidget/> </a>
+        </div>  
        </ul>
     </nav>
 
