@@ -1,6 +1,8 @@
+
 import { useContext, useEffect } from 'react';
 import { CartContext } from './CartContext';
 import { WrapperCart, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductAmountContainer, ProductAmount, ProductPrice, Hr } from './styledComponents';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
     const test = useContext(CartContext);
@@ -8,7 +10,13 @@ const Cart = () => {
     return (
         <WrapperCart>
             <TitleCart>CARRITO</TitleCart>
-            <button onClick={test.clear}>Vaciar Carrito</button>
+            
+            <Link to='/'><button> Seguir comprando </button></Link>
+            {
+                (test.cartList.length > 0)
+                ? <button onClick={test.clear}>Vaciar Carrito</button>
+                : <p> Tu carrito esta vacio </p>
+            }
             {
                 test.cartList.length > 0 && (
                 <ContentCart>
@@ -26,9 +34,12 @@ const Cart = () => {
                           </ProductDetail>
                           <PriceDetail>
                           <ProductAmountContainer>
-                          <ProductAmount>1 items</ProductAmount>
+                          <ProductAmount>Item</ProductAmount>
                           </ProductAmountContainer>
-                          <ProductPrice>$ {item.cost} c/u</ProductPrice>
+                          <ProductPrice>
+                              $ {item.cost} c/u
+                              <p> Total por Prodcuto $</p>{test.calcTotalPorItem}
+                          </ProductPrice>
                           </PriceDetail>
                         </Product>)
                     }
@@ -37,6 +48,9 @@ const Cart = () => {
                 )
             }
             
+            <p> Total $</p>{test.calcTotal}  
+            
+            <button> Finalizar compra </button>
         </WrapperCart>
     );
 }
