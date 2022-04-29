@@ -32,7 +32,7 @@ const products = [
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
 
       image: [
-        "https://res.cloudinary.com/bodegas-del-sur/image/upload/v1631316114/BodegasDelSur/01_1619706076.webp"
+        "https://jumboargentina.vtexassets.com/arquivos/ids/414472-800-600?v=636442100693130000&width=800&height=600&aspect=true"
       ],
       sales: 0,
       createdAt: "2021-09-18T05:11:04.952Z",

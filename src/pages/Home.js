@@ -6,6 +6,7 @@ import Cart from "../components/Cart";
 import CartContextProvider from "../components/CartContext";
 
 
+
 const Home = () => {
     return (
         <CartContextProvider>
