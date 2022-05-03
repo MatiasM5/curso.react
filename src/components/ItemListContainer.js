@@ -1,42 +1,40 @@
-import ItemList from './ItemList';
 import { useEffect, useState } from 'react';
+import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
-import { collection, getDocs } from "firebase/firestore";
-import db from '../utils/firebaseConfig';
-
+import { firestoreFetch } from '../utils/firestoreFetch';
 
 
 const ItemListContainer = () => {
+
     const [datos, setDatos] = useState([]);
     const { idCategory } = useParams();
 
 
     useEffect(() => {
-        const fetchFromFirestore = async () => {
-        const querySnapshot = await getDocs(collection(db, "productos"));
-        const dataFromFirestore = querySnapshot.docs.map((doc) => ({
-            id: doc.id,
-            ...doc.data()
-        }));
-        return dataFromFirestore
-        }
-        fetchFromFirestore()
+    firestoreFetch(idCategory)
         .then(result => setDatos(result))
         .catch(err => console.log(err));
-    }, [datos]);
+    }, [idCategory]);
 
-    useEffect(() => {
-        return (() => {
-            setDatos([]);
-        })
+
+
+    useEffect(()=> {
+    return (()=> {
+          setDatos([]);
+    })
     }, []);
+    
 
     return (
-        <ItemList items={datos}/>
-    );
+        <>
+        <ItemList items={datos} />
+        </>
+        
+    )
 }
 
 export default ItemListContainer;
+
 
 /*const onAdd = (qty) => {
     alert("Has seleccionado " + qty + " items.");
