@@ -15,6 +15,7 @@ const NavBar = () => {
         <li className="nav-item">
         <Link to="./category/A" className="nav active"  >Alcohol</Link>
         </li>
+        
         <li className="nav-item">
         <Link to="./category/B" className="nav" >Agua</Link>
         </li>

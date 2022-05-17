@@ -1,7 +1,7 @@
 
-import { useContext, useEffect } from 'react';
+import { useContext,  } from 'react';
 import { CartContext } from './CartContext';
-import { WrapperCart, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductAmountContainer, ProductAmount, ProductPrice, Hr } from './styledComponents';
+import { WrapperCart, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductAmountContainer, ProductAmount, ProductPrice,  } from './styledComponents';
 import { Link } from 'react-router-dom';
 import { collection, doc, setDoc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
 import db from '../utils/firebaseConfig';
@@ -70,11 +70,11 @@ const Cart = () => {
                     
                         <Product>
                           <ProductDetail>
-                          <ImageCart src={item.image[0]} />
-                          <button onClick={test.removeItem}> Eliminar Producto</button>
+                          <ImageCart src={item.imgItem} />
+                          <button onClick={() => test.removeItem(item.idItem)}> Eliminar Producto</button>
                           <Details>
                           <span>
-                            <b>Product:</b> {item.name}
+                            <b>Product:</b> {item.nameItem}
                           </span>
                           </Details>
                           </ProductDetail>
@@ -83,8 +83,8 @@ const Cart = () => {
                           <ProductAmount>Item</ProductAmount>
                           </ProductAmountContainer>
                           <ProductPrice>
-                              $ {item.cost} c/u
-                              <p> Total por Prodcuto $</p>{test.calcTotalPorItem}
+                              $ {item.costItem} c/u
+                              <p> Total por Prodcuto $ {test.calcTotalPorItem(item.idItem)}</p> 
                           </ProductPrice>
                           </PriceDetail>
                         </Product> 
@@ -100,7 +100,7 @@ const Cart = () => {
                 test.cartList.length > 0 && 
                 <div>
                     <h1> Tu orden </h1>
-                    <p> Total $ </p>{test.calcTotal} 
+                    <p> Total $ {test.calcTotal()} </p>
                     <button onClick={finishOrder}> Finalizar compra </button>
                 </div>
                 }
