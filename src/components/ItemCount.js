@@ -10,22 +10,22 @@ const ItemCount = ({ stock = 0, initial = 1,  onAdd }) => {
         setCount(initial);
     },[]);
 
-    const increment = () => {
+    const suma = () => {
         if (count < stock) {
             setCount(count + 1);
         }
     }
     
-    const decrement = () => {
+    const resta = () => {
         if (count > initial+1) {
             setCount(count - 1);
         }
     }
     return (
         <ProductAmountContainer>
-            <Button variant="text" onClick={increment}><Add /></Button>
+            <Button variant="text" onClick={suma}><Add /></Button>
             <ProductAmount>{count}</ProductAmount>
-            <Button variant="text" onClick={decrement}><Remove /></Button>
+            <Button variant="text" onClick={resta}><Remove /></Button>
             {
                 stock && count
                 ? <Button variant="contained" color="primary" onClick={() => onAdd(count)}>Add to Cart</Button>

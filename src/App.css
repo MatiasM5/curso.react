@@ -4,13 +4,19 @@ nav ul li a {
 }
 
 .nav{
-  display: block;
+  display: flex;
   padding: .5rem 1rem;
   padding-top: 0.5rem;
 }
 
 .bg{
   background-color: #282c34; 
+}
+
+.titulo{
+  color: white;
+  text-decoration: none;
+  margin-right: 900px;
 }
 
 .cart{
